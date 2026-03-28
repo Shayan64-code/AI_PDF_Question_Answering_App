@@ -12,7 +12,7 @@ client = OpenAI(base_url="https://openrouter.ai/api/v1",
                 )
 
 if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "system", "content" : ("You are a helpful assistant who gives solution according to the given context, which is related to GenAI." "You clear about the problems that the student facing according to the context. ")}]
+    st.session_state.messages = [{"role": "system", "content" : ("You are a helpful assistant who gives solution according to the given context, which is related to GenAI." "You clear about the problems that the student facing according to the context. and if their is no solution in the given problem simply say Their is no solution in given context.")}]
 
 for mess in st.session_state.messages:
     if mess["role"] != "system":
