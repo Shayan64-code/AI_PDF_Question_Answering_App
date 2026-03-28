@@ -20,7 +20,7 @@ def retrieve_prompt_with_context(Question):
     results = vectorstore.similarity_search(Question, k=3)
     # print(results[0].metadata["chunk_id"])
 
-    context = "\n".join([doc.page_content for doc in results]) #join just clean content and gives it to LL
+    context = "\n\n".join([doc.page_content for doc in results]) #join just clean content and gives it to LL
     # results
 
     ## Prompt
